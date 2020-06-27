@@ -6,9 +6,10 @@ require 'selenium-webdriver'
 
 
 Capybara.register_driver :site_prism do |app|
-  # comentado para teste  Capybara::Selenium::Driver.new(app, browser: :chrome)
+  # comentado para testar configuracao de user_agent
+  # Capybara::Selenium::Driver.new(app, browser: :chrome)
 
-  #alterado para verificar se não retorna erro de acesso negado no servidor
+  #alterado para verificar se com user agent não retorna erro de acesso negado no servidor ao pesquisar produto
   #
   user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
